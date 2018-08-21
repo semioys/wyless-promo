@@ -1,0 +1,23 @@
+section.contact
+  .container
+    h3.contact__title КОНТАКТЫ
+    p.contact__desc Задайте нам вопрос через  форму или свяжитесь другим для Вас удобным способом!
+    .contact__inner
+      .contact__info
+        .contact__box
+          +icon('phone', 'contact__icon')
+          p.contact__text +38 (093) 512-93-17
+        .contact__box
+          +icon('mail', 'contact__icon')
+          p.contact__text wyless@gmail.com
+        .contact__box
+          +icon('location', 'contact__icon')
+          p.contact__text Ukraine, Zhytomir
+        .contact__box
+          +icon('web', 'contact__icon')
+          p.contact__text www.wyless.com
+      form.contact__form(action="#")
+        input.contact__name(type="text", name="name", placeholder="Ваше имя...")
+        input.contact__email(type="email", name="email", placeholder="Ваш e-mail...")
+        textarea.contact__message(name="message", cols="30", rows="10", placeholder="Пишите сообщение здесь")
+        button.contact__submit(type="submit") Отправить сообщение
