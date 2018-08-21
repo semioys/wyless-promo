@@ -5,11 +5,13 @@
   background: #FF416C;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  position: relative;
+  
   
 
   color: #fff;
-  height: 600px;
+  height: 100vh;
+  min-height: 640px;
 
   &__header {
     padding-top: 30px;
@@ -38,45 +40,118 @@
   }
 
   &__content {
-    padding-top: 60px;
-    display: flex;
-    justify-content: space-between;
+    // padding-top: 60px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
   }
 
   &__pic {
-    height: 356px;
-    width: 444px;
+    max-width: 100%;
+    height: auto;
+
+    @media screen and (max-height: 780px) {
+      display: block;
+      margin: 0 auto;
+      max-width: 80%;
+    }
   }
 
   &__text {
-    padding-top: 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
   }
 
   &__title {
+    // position: absolute;
     line-height: 150%;
-    font-size: 32px;
+    font-size: 42px;
     padding: 0;
+    padding-top: 40px;
     margin: 0;
+    // bottom: 22%;
+    width: 850px;
+    text-align: center;
+
+    @media screen and (max-height: 890px) {
+      padding-top: 35px;
+      font-size: 36px;
+    }
+
+    @media screen and (max-height: 845px) {
+      padding-top: 25px;
+      font-size: 34px;
+    }
+
+    @media screen and (max-height: 805px) {
+      padding-top: 15px;
+      font-size: 32px;
+    }
+
+    
   }
 
   &__subtitle {
+    // position: absolute;
     line-height: 150%;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: normal;
     padding: 0;
     margin: 0;
-    padding-top: 43px;
-    padding-bottom: 68px;
+    width: 750px;
+    text-align: center;
+    // bottom: 12%;
+
+    @media screen and (max-height: 890px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-height: 845px) {
+      font-size: 26px;
+    }
+
+    @media screen and (max-height: 805px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-height: 720px) {
+      display: none;
+    }
   }
 
   &__button {
+    margin-top: auto;
+    text-align: center;
+    bottom: 4%;
+    position: absolute;
     font-size: 24px;
     color: #fff;
-    padding: 12px 40px;
+    padding: 24px 80px;
+    // padding: 12px 40px;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #00A2E4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+
+    @media screen and (max-height: 890px) {
+      padding: 16px 48px;
+      bottom: 4%;
+    }
+
+    @media screen and (max-height: 845px) {
+      padding: 14px 44px;
+      bottom: 4%;
+    }
+
+    @media screen and (max-height: 805px) {
+      padding: 12px 40px;
+      bottom: 4%;
+    }
+
+    
   }
 
 }
