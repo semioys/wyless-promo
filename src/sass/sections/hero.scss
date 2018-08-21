@@ -1,0 +1,91 @@
+.hero {
+  // background: #FF416C;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to top, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to top, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FF416C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+
+  color: #fff;
+  height: 600px;
+
+  &__header {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--active {
+      color: #fff;
+    }
+  }
+
+  &__content {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__pic {
+    height: 356px;
+    width: 444px;
+  }
+
+  &__text {
+    padding-top: 25px;
+  }
+
+  &__title {
+    line-height: 150%;
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__subtitle {
+    line-height: 150%;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    padding-top: 43px;
+    padding-bottom: 68px;
+  }
+
+  &__button {
+    font-size: 24px;
+    // font-weight: bold;
+
+    color: #fff;
+    padding: 12px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #00A2E4;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+.icon-logo {
+  fill: #fff;
+  height: 70px;
+  width: 200px;
+}
+

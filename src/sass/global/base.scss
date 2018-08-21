@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 *, *:before, *:after {
@@ -9,4 +10,10 @@ html {
 ul,
 ol {
   list-style-type: none;
+}
+
+.container {
+  width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
