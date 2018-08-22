@@ -1,15 +1,15 @@
-section.hero
+section.hero#hero
   .container
     header.hero__header
-      .hero__logo
+      a.hero__logo(href="/")
         +icon('logo')
-      nav.hero__nav
-        a.hero__link.hero__link--active(href="#") Главная
-        a.hero__link(href="#") Услуги
-        a.hero__link(href="#") Контакты
+      nav.hero__nav#main-nav
+        a.hero__link Главная
+        a.hero__link.hero__link--usable(href="#features") Услуги
+        a.hero__link.hero__link--usable(href="#contact") Контакты
     img.hero__pic(src="./img/hero-pic.png", alt="Hero Picture")
     .hero__content 
       .hero__text
         h1.hero__title МЫ СОЗДАЕМ САЙТЫ И ПРИЛОЖЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА
         h2.hero__subtitle  НАША КОМАНДА ВЫПОЛНЯЕТ РАБОТЫ ПРОФЕССИОНАЛЬНО, БЫСТРО, КАЧЕСТВЕННО!
-        a.hero__button(href="#") Задать вопрос
+        a.hero__button(href="#contact") Задать вопрос

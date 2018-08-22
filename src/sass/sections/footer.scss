@@ -1,0 +1,51 @@
+.footer {
+
+  background: #FF416C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  &__inner {
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: #404143;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      fill: lighten($color: #404143, $amount: 5%);
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    margin-left: 65px;
+    text-decoration: none;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+#scrollUp {
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  transition: 0.3s;
+
+  &:hover {
+    background-image: url(../img/arroww.png);
+  }
+}

@@ -7,7 +7,7 @@
     font-size: 32px;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 40px;
     font-weight: bold;
   }
 
@@ -22,7 +22,7 @@
   }
 
   &__inner {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,8 @@
   &__box {
     font-size: 18px;
     display: flex;
-    margin-bottom: 50px;
+    align-items: center;
+    margin-bottom: 30px;
 
     &:last-child {
       margin-bottom: 0;
@@ -67,6 +68,12 @@
 
   &__text {
     margin-left: 30px;
+    text-decoration: none;
+    color: #343434;
+
+    &:hover {
+      color: lighten($color: #343434, $amount: 30%);
+    }
   }
 
   &__form {
@@ -88,7 +95,7 @@
 
   &__email {
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding-left: 20px;
     font-size: 18px;
     width: 350px;
@@ -113,7 +120,7 @@
   }
 
   &__submit {
-    margin-top: 52px;
+    margin-top: 42px;
     background: #00A2E4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
     font-size: 18px;
@@ -123,6 +130,11 @@
     font-weight: bold;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: lighten($color: #00A2E4, $amount: 5%);
+    }
   }
 
 
