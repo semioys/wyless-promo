@@ -14,14 +14,17 @@ gulp.task('server', function() {
 
 gulp.task('js', function() {
   return gulp.src([
+    './src/js/jquery.js',
     './src/js/smoothscroll.js',
+    './src/js/scrollup.js',
+    './src/js/particles.js',
     './src/js/main.js'
   ])
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.concat('main.min.js'))
-    .pipe(plugins.babel({
-      presets: ['env']
-    }))
+    // .pipe(plugins.babel({
+    //   presets: ['env']
+    // }))
     .pipe(plugins.uglify())
     .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest('./build/js'))
@@ -104,6 +107,11 @@ gulp.task('copy:fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('copy:config', function() {
+  return gulp.src('src/js/particlesjs-config.json')
+    .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('img:dev', function() {
   return gulp.src('./src/img/*.{jpeg,png,gif,svg,jpg,ico}')
   .pipe(gulp.dest('./build/img'))
@@ -132,11 +140,11 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
   'clean',
-  gulp.parallel('pug', 'sass', 'js', 'js:libs', 'svg', 'copy:fonts', 'img:dev'),
+  gulp.parallel('pug', 'sass', 'js', 'js:libs', 'svg', 'copy:fonts', 'copy:config', 'img:dev'),
   gulp.parallel('watch', 'server') 
 ));
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('pug', 'sass', 'js', 'js:libs', 'svg', 'copy:fonts', 'img:build'),
+  gulp.parallel('pug', 'sass', 'js', 'js:libs', 'svg', 'copy:fonts', 'copy:config', 'img:build'),
 ));

@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media screen and (max-width: 606px) {
+      height: 100px;
+    }
   }
 
   &__icon {
@@ -25,6 +29,11 @@
     &:first-of-type {
       margin-left: 0;
     }
+
+    @media screen and (max-width: 606px) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__link {
@@ -33,6 +42,11 @@
     &:first-of-type {
       margin-left: 0;
     }
+
+    @media screen and (max-width: 606px) {
+      margin-left: 35px;
+    }
+
   }
 }
 
@@ -47,5 +61,10 @@
 
   &:hover {
     background-image: url(../img/arroww.png);
+  }
+
+  @media screen and (max-width: 606px) {
+    width: 0;
+    height: 0;
   }
 }

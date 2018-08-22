@@ -16,7 +16,27 @@ ol {
   width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1170px) {
+    width: 992px;
+  }
+
+  @media screen and (max-width: 1022px) {
+    overflow: hidden;
+    width: 768px;
+  }
+
+  @media screen and (max-width: 798px) {
+    width: 576px;
+  }
+
+  @media screen and (max-width: 606px) {
+    width: 320px;
+  }
+
 }
+
+
 
 /* open-sans-regular - cyrillic_latin */
 @font-face {

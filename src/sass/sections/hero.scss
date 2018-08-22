@@ -1,16 +1,22 @@
 .hero {
-  // background: #FF416C;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to top, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to top, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: #FF416C;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FF416C;
+  color: #fff;
+
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
   position: relative;
   
-
-  color: #fff;
   height: 100vh;
   min-height: 640px;
+
+  @media (max-width: 1022px) {
+    height: 640px;
+  }
+
+  @media screen and (max-width: 606px) {
+    height: 570px;
+    min-height: 570px;
+  }
 
   &__header {
     padding-top: 30px;
@@ -21,6 +27,25 @@
 
   &__logo {
     text-decoration: none;
+
+    @media screen and (max-width: 606px) {
+      display: none;
+    }
+  }
+
+  &__logo-mobile {
+    display: none;
+    text-decoration: none;
+
+    @media screen and (max-width: 606px) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    @media screen and (max-width: 606px) {
+      display: block;
+    }
   }
 
   &__link {
@@ -44,24 +69,46 @@
       }
     }
 
-
-  }
-
-  &__content {
-    // padding-top: 60px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
+    @media screen and (max-width: 606px) {
+      display: block;
+      margin: 0;
+      margin-bottom: 5px;
+    }
   }
 
   &__pic {
     max-width: 100%;
     height: auto;
 
+    @media (max-width: 798px) {
+      display: none;
+    }
+
+    &--mobile {
+
+      display: none;
+
+      @media (max-width: 798px) {
+        display: block;
+        max-width: 75%;
+        padding-top: 15px;
+        margin: 0 auto;
+        height: auto;
+      }
+
+      @media screen and (max-width: 606px) {
+        max-width: 100%;
+      }
+    }
+
     @media screen and (max-height: 780px) {
       display: block;
       margin: 0 auto;
       max-width: 80%;
+
+      @media (max-width: 798px) {
+        display: none;
+      }
     }
   }
 
@@ -75,13 +122,11 @@
   }
 
   &__title {
-    // position: absolute;
     line-height: 150%;
     font-size: 42px;
     padding: 0;
     padding-top: 40px;
     margin: 0;
-    // bottom: 22%;
     width: 850px;
     text-align: center;
 
@@ -99,12 +144,28 @@
       padding-top: 15px;
       font-size: 32px;
     }
-
     
+    @media (max-width: 1022px) {
+      font-size: 32px;
+      
+      @media screen and (min-height: 640px) {
+        padding-top: 15px;
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 798px) {
+      width: 100%;
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 606px) {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
   }
 
   &__subtitle {
-    // position: absolute;
     line-height: 150%;
     font-size: 32px;
     font-weight: normal;
@@ -112,7 +173,6 @@
     margin: 0;
     width: 800px;
     text-align: center;
-    // bottom: 12%;
 
     @media screen and (max-height: 890px) {
       font-size: 28px;
@@ -129,6 +189,26 @@
     @media screen and (max-height: 720px) {
       display: none;
     }
+
+    @media (max-width: 1022px) {
+      width: 520px;
+      font-size: 18px;
+
+      @media screen and (min-height: 640px) {
+        display: block;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 798px) {
+      padding-top: 10px;
+      width: 70%;
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 606px) {
+      display: none;
+    }
   }
 
   &__button {
@@ -143,7 +223,6 @@
     color: #fff;
     padding: 24px 0;
     text-align: center;
-    // padding: 12px 40px;
     text-decoration: none;
     text-transform: uppercase;
     background-color: #00A2E4;
@@ -167,10 +246,24 @@
     @media screen and (max-height: 805px) {
       padding: 12px 40px;
       bottom: 4%;
+
+    } 
+
+    @media (max-width: 1022px) {
+      font-size: 20px;
+
+      @media screen and (min-height: 640px) {
+        padding: 14px 0;
+      }
     }
 
-    
+    @media screen and (max-width: 606px) {
+      position: relative;
+      padding: 18px 0;
+      font-weight: bold;
+    }
   }
+
 
 }
 
@@ -180,3 +273,8 @@
   width: 220px;
 }
 
+.logo-mobile {
+  width: 143px;
+  height: 22px;
+  fill: #fff;
+}
