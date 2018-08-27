@@ -20,13 +20,11 @@ gulp.task('js', function() {
     './src/js/particles.js',
     './src/js/main.js'
   ])
-    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.concat('main.min.js'))
     // .pipe(plugins.babel({
     //   presets: ['env']
     // }))
     .pipe(plugins.uglify())
-    .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.reload({
       stream: true
@@ -55,7 +53,6 @@ gulp.task('pug', function() {
 
 gulp.task('sass', function() {
   return gulp.src('./src/sass/main.scss')
-    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass())
     .on("error", plugins.notify.onError({
       message: "Error: <%= error.message %>",
@@ -66,7 +63,6 @@ gulp.task('sass', function() {
     }))
     .pipe(plugins.csso())
     .pipe(plugins.rename('main.min.css'))
-    .pipe(plugins.sourcemaps.write())
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -113,7 +109,7 @@ gulp.task('copy:config', function() {
 });
 
 gulp.task('img:dev', function() {
-  return gulp.src('./src/img/*.{jpeg,png,gif,svg,jpg,ico}')
+  return gulp.src('./src/img/*.{jpeg,png,gif,jpg,ico}')
   .pipe(gulp.dest('./build/img'))
   .pipe(browserSync.reload({
     stream: true
@@ -121,7 +117,7 @@ gulp.task('img:dev', function() {
 });
 
 gulp.task('img:build', function() {
-  return gulp.src('./src/img/*.{jpeg,png,gif,svg,jpg,ico}')
+  return gulp.src('./src/img/*.{jpeg,png,gif,jpg,ico}')
   .pipe(plugins.tinypng('K0xRYsLdTnv_qP_DK50Jd8_PK6lyIUBp'))
   .pipe(gulp.dest('./build/img'))
 });

@@ -1,19 +1,19 @@
 svg4everybody();
 
-$('a').smoothScroll({
+$("a").smoothScroll({
   speed: 1000
 });
 
-$(function () {
+$(function() {
   $.scrollUp({
     scrollDistance: 500,
-    animation: 'slide',  
+    animation: "slide",
     AnimationSpeed: 600,
     scrollImg: true,
     zIndex: 500
   });
 });
 
-particlesJS.load('particles-js', './js/particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
+particlesJS.load("particles-js", "./js/particlesjs-config.json", function() {
+  console.log("callback - particles.js config loaded");
 });

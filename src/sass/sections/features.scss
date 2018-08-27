@@ -2,7 +2,6 @@
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   position: relative;
 
-
   &__list {
     padding-top: 30px;
 
@@ -42,10 +41,7 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    
   }
-
 
   &__picture {
     flex-basis: 46%;
@@ -118,9 +114,8 @@
   }
 
   &__accent {
-    color: #FF416C;
+    color: #ff416c;
   }
-  
 }
 
 #particles-js {

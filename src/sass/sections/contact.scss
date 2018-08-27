@@ -1,5 +1,4 @@
 .contact {
-
   color: #343434;
 
   &__title {
@@ -63,24 +62,21 @@
     }
   }
 
-
-
   &__form {
-    position: relative; 
+    position: relative;
     flex-basis: 735px;
 
     &:before {
       z-index: -1;
       width: 816px;
       content: " ";
-      background-image: url('../img/contacts-accent.png');
+      background-image: url("../img/contacts-accent.png");
       position: absolute;
-      height:444px;
+      height: 444px;
       background-size: 100% 100%;
       top: -30px;
       right: -20px;
     }
-
   }
 
   &__box {
@@ -94,8 +90,7 @@
 
       @media (max-width: 798px) {
         margin-bottom: 30px;
-
-       }
+      }
     }
 
     @media (max-width: 1022px) {
@@ -116,20 +111,17 @@
 
     &:nth-child(2n) {
       @media (max-width: 798px) {
-       margin-left: auto;
+        margin-left: auto;
       }
 
       @media screen and (max-width: 606px) {
         margin-left: 0;
       }
     }
-    
-    
   }
 
   &__info {
     flex-basis: 28%;
-
 
     @media (max-width: 1022px) {
       flex-basis: 26%;
@@ -143,7 +135,7 @@
   }
 
   &__icon {
-    fill: #00A2E4;
+    fill: #00a2e4;
     width: 65px;
     height: 65px;
 
@@ -179,7 +171,6 @@
     @media (max-width: 798px) {
       margin-left: 15px;
     }
-    
   }
 
   &__form {
@@ -213,7 +204,7 @@
     font-size: 18px;
     width: 343px;
     height: 60px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(254, 96, 112, 0.1);
     box-sizing: border-box;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
@@ -238,7 +229,6 @@
       margin-right: 0;
       margin-bottom: 30px;
     }
-
   }
 
   &__email {
@@ -248,7 +238,7 @@
     font-size: 18px;
     width: 344px;
     height: 60px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(254, 96, 112, 0.1);
     box-sizing: border-box;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
@@ -269,17 +259,16 @@
       flex-basis: 47%;
       width: 47%;
     }
-    
+
     @media screen and (max-width: 606px) {
       flex-basis: 100%;
     }
-
   }
 
   &__message {
     width: 100%;
     height: 300px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(254, 96, 112, 0.1);
     box-sizing: border-box;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
@@ -298,13 +287,11 @@
     @media screen and (max-width: 606px) {
       height: 200px;
     }
-
-
   }
 
   &__submit {
     margin-top: 42px;
-    background: #00A2E4;
+    background: #00a2e4;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
     font-size: 18px;
     padding: 22px;
@@ -316,7 +303,7 @@
     transition: 0.3s;
 
     &:hover {
-      background-color: lighten($color: #00A2E4, $amount: 5%);
+      background-color: lighten($color: #00a2e4, $amount: 5%);
     }
 
     @media (max-width: 1170px) {
@@ -341,20 +328,18 @@
       margin-left: 0;
     }
   }
-
-
 }
 
 @media (max-width: 1170px) {
   .contact__form:before {
-      right: 0;
-    }
+    right: 0;
+  }
 }
 
 @media (max-width: 1022px) {
   .contact__form:before {
     width: 600px;
-    height:400px;
+    height: 400px;
   }
 }
 
@@ -363,4 +348,3 @@
     display: none;
   }
 }
-
